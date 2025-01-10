@@ -4,6 +4,7 @@ const User = require("../../models/Users");
 
 // POST route to handle user login
 router.post("/login", async (req, res) => {
+  console.log("Request Body:", req.body);
   const { email, password } = req.body;
 
   if (!email || !password) {
