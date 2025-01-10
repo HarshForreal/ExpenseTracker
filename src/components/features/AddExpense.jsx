@@ -18,7 +18,7 @@ export default function AddExpense() {
   const fetchExpenses = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/expenses/expenses"
+        "https://expense-tracker-qn11-harshforreals-projects.vercel.app/api/expenses/expenses"
       );
       setExpenses(response.data); // Store fetched expenses in state
     } catch (error) {
@@ -42,7 +42,7 @@ export default function AddExpense() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:5000/api/expenses/add",
+        "https://expense-tracker-qn11-harshforreals-projects.vercel.app/api/expenses/add",
         newExpense
       );
 

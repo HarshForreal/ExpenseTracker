@@ -32,9 +32,12 @@ export default function Dashboard() {
 
     if (loggedInUser) {
       axios
-        .get(`http://localhost:5000/api/users/getPersonalExpense`, {
-          params: { email: loggedInUser.email },
-        })
+        .get(
+          `https://expense-tracker-qn11-harshforreals-projects.vercel.app/api/users/getPersonalExpense`,
+          {
+            params: { email: loggedInUser.email },
+          }
+        )
         .then((response) => {
           if (response.data.success) {
             setPersonalExpense(response.data.amount); // Set the user's personal expense

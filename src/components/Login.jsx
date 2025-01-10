@@ -12,7 +12,9 @@ export default function LoginPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users/list")
+      .get(
+        "https://expense-tracker-qn11-harshforreals-projects.vercel.app/api/users/list"
+      )
       .then((response) => setUsers(response.data))
       .catch((error) => console.error("Failed to fetch users:", error));
   }, []);
@@ -21,7 +23,7 @@ export default function LoginPage() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://expense-tracker-qn11-harshforreals-projects.vercel.app/api/auth/login",
         {
           email,
           password,
@@ -120,7 +122,7 @@ export default function LoginPage() {
 
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:5000/api/users/list")
+//       .get("https://expense-tracker-qn11-harshforreals-projects.vercel.app/api/users/list")
 //       .then((response) => setUsers(response.data))
 //       .catch((error) => console.error("Failed to fetch users:", error));
 //   }, []);
@@ -129,7 +131,7 @@ export default function LoginPage() {
 //     e.preventDefault();
 //     try {
 //       const response = await axios.post(
-//         "http://localhost:5000/api/auth/login",
+//         "https://expense-tracker-qn11-harshforreals-projects.vercel.app/api/auth/login",
 //         {
 //           email,
 //           password,
