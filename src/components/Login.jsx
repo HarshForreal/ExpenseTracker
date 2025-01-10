@@ -27,6 +27,7 @@ export default function LoginPage() {
           password,
         }
       );
+      console.log("Login Response:", response.data);
 
       if (response.data.success) {
         localStorage.setItem("user", JSON.stringify(response.data.user));
