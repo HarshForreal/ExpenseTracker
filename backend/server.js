@@ -6,7 +6,13 @@ const connectDB = require("./db");
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    orgin: ["https://expense-tracker-qn11-harshforreals-projects.vercel.app"],
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 
 connectDB();
 
@@ -20,5 +26,5 @@ app.use("/api/users", require("./api/users/getPersonalExpense")); // Update the 
 app.use("/api/auth", require("./api/auth/login"));
 
 // app.listen(5000, () => console.log("Server running on port 5000"));
-const PORT = process.env.PORT || 5000; 
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
