@@ -6,7 +6,7 @@ const User = require("../../models/Users");
 // POST route to split expense
 router.post("/split", async (req, res) => {
   const { expenseName, amount, selectedUsers } = req.body;
-  const splitAmount = amount / (selectedUsers.length + 1); // Split among users + you
+  const splitAmount = Math.ceil((amount / selectedUsers.length) * 100) / 100; // Split among selected users and round up to two decimal places
 
   try {
     // Create a new expense

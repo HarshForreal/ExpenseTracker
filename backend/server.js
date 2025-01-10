@@ -16,6 +16,9 @@ app.use("/api/expenses", require("./api/expenses/splitExpenses"));
 
 app.use("/api/users", require("./api/users/addUsers"));
 app.use("/api/users", require("./api/users/getUsers"));
-
+app.use("/api/users", require("./api/users/getPersonalExpense")); // Update the path based on your folder structure
 app.use("/api/auth", require("./api/auth/login"));
-app.listen(5000, () => console.log("Server running on port 5000"));
+
+// app.listen(5000, () => console.log("Server running on port 5000"));
+const PORT = process.env.PORT || 5000; 
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -40,6 +40,7 @@ export default function LandingPage() {
               Simplify your internship finances and focus on what matters most –
               your learning and growth.
             </p>
+            
             <button
               onClick={handleGetStarted}
               className="bg-[#6D2323] hover:bg-[#A31D1D] text-[#E5D0AC] font-semibold py-3 px-8 rounded-full inline-flex items-center"
