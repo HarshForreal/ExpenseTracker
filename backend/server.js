@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    orgin: ["https://expense-tracker-nine-jade-33.vercel.app"],
+    orgin: "*",
     methods: ["GET", "POST"],
     credentials: true,
   })
