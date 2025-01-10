@@ -12,9 +12,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     axios
-      .get(
-        "https://expense-tracker-qn11-harshforreals-projects.vercel.app/api/users/list"
-      )
+      .get("https://expensetracker-eunz.onrender.com/api/users/list")
       .then((response) => setUsers(response.data))
       .catch((error) => console.error("Failed to fetch users:", error));
   }, []);
@@ -23,7 +21,7 @@ export default function LoginPage() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://expense-tracker-qn11-harshforreals-projects.vercel.app/api/auth/login",
+        "https://expensetracker-eunz.onrender.com/api/auth/login",
         {
           email,
           password,
