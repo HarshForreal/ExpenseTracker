@@ -12,7 +12,7 @@ export default function SplitExpense() {
   // Fetch users from the backend to populate the dropdown
   useEffect(() => {
     axios
-      .get("https://expensetracker-eunz.onrender.com/api/users/list")
+      .get("https://expense-tracker-qn11.vercel.app/api/users/list")
       .then((response) => {
         setUsers(response.data);
       })
@@ -46,7 +46,7 @@ export default function SplitExpense() {
 
     try {
       const response = await axios.post(
-        "https://expensetracker-eunz.onrender.com/api/expenses/split",
+        "https://expense-tracker-qn11.vercel.app/api/expenses/split",
         {
           expenseName,
           amount,

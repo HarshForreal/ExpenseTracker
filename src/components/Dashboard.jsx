@@ -33,7 +33,7 @@ export default function Dashboard() {
     if (loggedInUser) {
       axios
         .get(
-          `https://expensetracker-eunz.onrender.com/api/users/getPersonalExpense`,
+          `https://expense-tracker-qn11.vercel.app/api/users/getPersonalExpense`,
           {
             params: { email: loggedInUser.email },
           }

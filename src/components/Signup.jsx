@@ -14,7 +14,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://expensetracker-eunz.onrender.com/api/users/addUser",
+        "https://expense-tracker-qn11.vercel.app/api/users/addUser",
         {
           name,
           email,
